@@ -395,7 +395,7 @@ Thanks for choosing to share your data with adsb.p2sh.co!
 
 Check https://adsb.p2sh.co/myfeed/ for feeder status!
 
-Your feed should be active within 5 minutes, you can confirm by running the following command and looking for the IP address 78.46.234.18
+Your feed should be active within 5 minutes, you can confirm by running the following command and looking for the IP address 198.54.134.195
 netstat -t -n | grep -E '30004|31090'
 
 Question? Issues? Go here:
