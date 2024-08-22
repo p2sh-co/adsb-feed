@@ -1,9 +1,9 @@
 #!/bin/bash
 set -e
 
-REPO="https://github.com/airplanes-live/feed.git"
+REPO="https://github.com/p2sh-co/adsb-feed.git"
 BRANCH="main"
-IPATH=/usr/local/share/airplanes
+IPATH=/usr/local/share/p2sh
 mkdir -p $IPATH
 
 if [ "$(id -u)" != "0" ]; then

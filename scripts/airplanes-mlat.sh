@@ -1,10 +1,10 @@
 #!/bin/bash
 
-if grep -qs -e 'LATITUDE' /boot/adsb-config.txt &>/dev/null && [[ -f /boot/airplanes-env ]]; then
+if grep -qs -e 'LATITUDE' /boot/adsb-config.txt &>/dev/null && [[ -f /boot/p2sh-env ]]; then
     source /boot/adsb-config.txt
-    source /boot/airplanes-env
+    source /boot/p2sh-env
 else
-    source /etc/default/airplanes
+    source /etc/default/p2sh
 fi
 
 if [[ "$LATITUDE" == 0 ]] || [[ "$LONGITUDE" == 0 ]] || [[ "$USER" == 0 ]] || [[ "$USER" == "disable" ]]; then
@@ -23,7 +23,7 @@ while ! nc -z "$INPUT_IP" "$INPUT_PORT" && command -v nc &>/dev/null; do
     sleep 10
 done
 
-exec /usr/local/share/airplanes/venv/bin/mlat-client \
+exec /usr/local/share/p2sh/venv/bin/mlat-client \
     --input-type "$INPUT_TYPE" --no-udp \
     --input-connect "$INPUT" \
     --server "$MLATSERVER" \

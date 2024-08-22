@@ -1,19 +1,19 @@
 
 [Unit]
-Description=airplanes-feed
+Description=p2sh-feed
 Wants=network.target
 After=network.target
 
 [Service]
-User=airplanes
-RuntimeDirectory=airplanes-feed
-ExecStart=/usr/local/share/airplanes/airplanes-feed.sh
+User=p2sh
+RuntimeDirectory=p2sh-feed
+ExecStart=/usr/local/share/p2sh/p2sh-feed.sh
 Type=simple
 Restart=always
 RestartSec=30
 StartLimitInterval=1
 StartLimitBurst=100
-SyslogIdentifier=airplanes-feed
+SyslogIdentifier=p2sh-feed
 Nice=-1
 
 [Install]

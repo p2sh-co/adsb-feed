@@ -1,13 +1,13 @@
 #!/bin/bash
 
-if [ -f /boot/airplanes-config.txt ]; then
-    UUID_FILE="/boot/airplanes-uuid"
+if [ -f /boot/p2sh-config.txt ]; then
+    UUID_FILE="/boot/p2sh-uuid"
 else
-    mkdir -p /usr/local/share/airplanes
-    UUID_FILE="/usr/local/share/airplanes/airplanes-uuid"
+    mkdir -p /usr/local/share/p2sh
+    UUID_FILE="/usr/local/share/p2sh/p2sh-uuid"
     # move old file position
-    if [ -f /boot/airplanes-uuid ]; then
-        mv -f /boot/airplanes-uuid $UUID_FILE
+    if [ -f /boot/p2sh-uuid ]; then
+        mv -f /boot/p2sh-uuid $UUID_FILE
     fi
 fi
 
